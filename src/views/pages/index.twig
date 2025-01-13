@@ -1,0 +1,19 @@
+{#
+| Variable         | Type       | Description                                                         |
+|------------------|------------|---------------------------------------------------------------------|
+| page             | object     |                                                                     |
+| page.title       | string     | *could be html                                                      |
+| page.slug        | string     | ex: "cat.show"                                                      |
+#}
+
+{% extends "layouts.master" %}
+
+{% block content %}
+    {# Render the home component #}
+    {% component home %}
+{% endblock %}
+
+{% block scripts %}
+    {# Include the home.js script #}
+    <script defer src="{{ 'home.js' | asset }}"></script>
+{% endblock %}
